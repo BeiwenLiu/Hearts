@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PlayerConfigurationController">
+   <children>
+      <Button layoutX="599.0" layoutY="66.0" mnemonicParsing="false" text="Player screen" />
+      <Label layoutX="147.0" layoutY="235.0" text="Player1" />
+      <Label layoutX="413.0" layoutY="233.0" text="Player2" />
+      <Label layoutX="743.0" layoutY="227.0" text="Player3" />
+      <Label layoutX="1095.0" layoutY="223.0" text="Player4" />
+      <TextField fx:id="name1" layoutX="159.0" layoutY="279.0" />
+      <Label layoutX="46.0" layoutY="285.0" text="Name" />
+      <Label layoutX="48.0" layoutY="355.0" text="Color" />
+      <ChoiceBox fx:id="choiceBox" layoutX="158.0" layoutY="352.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="choiceBox1" layoutX="465.0" layoutY="357.0" prefWidth="150.0" />
+      <Label layoutX="333.0" layoutY="358.0" text="Color" />
+      <Label layoutX="332.0" layoutY="283.0" text="Name" />
+      <TextField fx:id="name2" layoutX="467.0" layoutY="276.0" />
+      <ChoiceBox fx:id="choiceBox2" layoutX="789.0" layoutY="342.0" prefWidth="150.0" />
+      <Label layoutX="683.0" layoutY="355.0" text="Color" />
+      <Label layoutX="685.0" layoutY="274.0" text="Name" />
+      <TextField fx:id="name3" layoutX="795.0" layoutY="270.0" />
+      <ChoiceBox fx:id="choiceBox3" layoutX="1101.0" layoutY="354.0" prefWidth="150.0" />
+      <Label layoutX="1011.0" layoutY="355.0" text="Color" />
+      <Label layoutX="1023.0" layoutY="275.0" text="Name" />
+      <TextField fx:id="name4" layoutX="1098.0" layoutY="268.0" />
+      <Button layoutX="616.0" layoutY="658.0" mnemonicParsing="false" onMouseClicked="#startGame" text="Start Game" />
+      <Button layoutX="824.0" layoutY="658.0" mnemonicParsing="false" onMouseClicked="#startGame" text="Shortcut" />
+   </children>
+</Pane>
