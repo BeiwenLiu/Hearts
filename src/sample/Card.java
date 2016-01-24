@@ -28,6 +28,6 @@ public class Card {
 
     @Override
     public String toString() {
-        return value + " of " + suit;
+        return value + " of " + suit + "/ point value: " + pointValue;
     }
 }
