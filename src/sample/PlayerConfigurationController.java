@@ -23,7 +23,8 @@ import java.util.ResourceBundle;
 public class PlayerConfigurationController implements Initializable{
     private final String[] DEFAULT_NAMES = {"You","James", "Thomas", "Daniel"};
     private final String[] DEFAULT_COLORS = {"Red", "Green", "Blue", "Yellow"};
-
+    public static Stage stage;
+    public static Scene scene;
     @FXML
     private TextField name1;
     @FXML
@@ -76,7 +77,9 @@ public class PlayerConfigurationController implements Initializable{
         }
 
         Scene game = new Scene(FXMLLoader.load(getClass().getResource("Game.fxml")));
+        scene = game;
         Stage initializer = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+        stage = initializer;
         initializer.setScene(game);
         initializer.show();
     }
