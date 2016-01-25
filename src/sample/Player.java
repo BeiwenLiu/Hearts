@@ -44,6 +44,10 @@ public class Player {
         return hand.get(0);
     }
 
+    public ArrayList<Card> returnHand() {
+        return hand;
+    }
+
     @Override
     public String toString() {
         return name + " " + color;

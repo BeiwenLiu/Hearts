@@ -14,6 +14,11 @@ public class Main extends Application {
     public static String playType;
     public static Stage theStage;
     public static Player[] players = new Player[4];
+    public static boolean qBreaks = false;
+    public static int pointLimit;
+    public static boolean jackOfDiamonds = false;
+    public static boolean passRound = true;
+    public static boolean shootersChoice = false;
 
     @Override
     public void start(Stage primaryStage) throws Exception{

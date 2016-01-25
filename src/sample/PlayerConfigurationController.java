@@ -51,6 +51,8 @@ public class PlayerConfigurationController implements Initializable{
         choiceBox2.getItems().addAll("Red", "Blue", "Green", "Yellow");
         choiceBox3.setItems(FXCollections.observableArrayList());
         choiceBox3.getItems().addAll("Red", "Blue", "Green", "Yellow");
+
+
     }
     @FXML
     public void startGame(Event event) throws IOException {
@@ -80,4 +82,36 @@ public class PlayerConfigurationController implements Initializable{
     }
 
 
+    @FXML
+    public void qSpadeOn(Event event) {
+        Main.qBreaks = true;
+    }
+    @FXML
+    public void qSpadeOff(Event event) {
+        Main.qBreaks = false;
+    }
+    @FXML
+    public void passOff(Event event) {
+        Main.passRound = false;
+    }
+    @FXML
+    public void passOn(Event event) {
+        Main.passRound = true;
+    }
+    @FXML
+    public void jackOff(Event event) {
+        Main.jackOfDiamonds = false;
+    }
+    @FXML
+    public void jackOn(Event event) {
+        Main.jackOfDiamonds = true;
+    }
+    @FXML
+    public void shooterOn(Event event) {
+        Main.shootersChoice = true;
+    }
+    @FXML
+    public void shooterOff(Event event) {
+        Main.shootersChoice = false;
+    }
 }

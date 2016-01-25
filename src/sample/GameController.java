@@ -13,6 +13,7 @@ public class GameController implements Initializable {
     private final String[] DEFAULT_COLORS = {"Red", "Green", "Blue", "Yellow"};
     private Deck deck = new Deck();
     private Player[] players = Main.players;
+    private final int HAND_SIZE = 13;
 
     @Override
     public void initialize(URL fxmlFileLocation, ResourceBundle resources) {
@@ -23,6 +24,11 @@ public class GameController implements Initializable {
             }
         }
 
+        for (int i = 0; i < players.length; i++) {
+            for (int j = 0; j < HAND_SIZE; j++) {
+                players[i].dealHand(deck.dealCard());
+            }
+        }
 
 
 

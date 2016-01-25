@@ -29,5 +29,33 @@
       <TextField fx:id="name4" layoutX="1098.0" layoutY="268.0" />
       <Button layoutX="616.0" layoutY="658.0" mnemonicParsing="false" onMouseClicked="#startGame" text="Start Game" />
       <Button layoutX="824.0" layoutY="658.0" mnemonicParsing="false" onMouseClicked="#shortcut" text="Shortcut" />
+      <ToggleButton layoutX="552.0" layoutY="492.0" mnemonicParsing="false" onMouseClicked="#qSpadeOn" text="Yes">
+         <toggleGroup>
+            <ToggleGroup fx:id="Qbreak" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton layoutX="586.0" layoutY="492.0" mnemonicParsing="false" onMouseClicked="#qSpadeOff" selected="true" text="No" toggleGroup="$Qbreak" />
+      <ToggleButton layoutX="584.0" layoutY="450.0" mnemonicParsing="false" onMouseClicked="#passOff" text="No">
+         <toggleGroup>
+            <ToggleGroup fx:id="PassRound" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton layoutX="551.0" layoutY="450.0" mnemonicParsing="false" onMouseClicked="#passOn" selected="true" text="Yes" toggleGroup="$PassRound" />
+      <ToggleButton layoutX="586.0" layoutY="527.0" mnemonicParsing="false" onMouseClicked="#jackOff" selected="true" text="No">
+         <toggleGroup>
+            <ToggleGroup fx:id="Jack" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton layoutX="552.0" layoutY="527.0" mnemonicParsing="false" onMouseClicked="#jackOn" text="Yes" toggleGroup="$Jack" />
+      <Label layoutX="436.0" layoutY="496.0" text="Q-Spade Breaks" />
+      <Label layoutX="433.0" layoutY="454.0" text="Pass Round" />
+      <Label layoutX="430.0" layoutY="531.0" text="Jack of Diamonds" />
+      <ToggleButton layoutX="553.0" layoutY="561.0" mnemonicParsing="false" onMouseClicked="#shooterOn" text="Yes">
+         <toggleGroup>
+            <ToggleGroup fx:id="Shooter" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton layoutX="587.0" layoutY="561.0" mnemonicParsing="false" onMouseClicked="#shooterOff" selected="true" text="No" toggleGroup="$Shooter" />
+      <Label layoutX="421.0" layoutY="565.0" text="Shooter's Choice" />
    </children>
 </Pane>
