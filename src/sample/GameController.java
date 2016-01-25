@@ -1,7 +1,7 @@
 package sample;
 /**
  * @author Beiwen Liu
- * @version 1.2
+ * @version 1.3
  * 1.0 Notes: Implemented Basic structure of sample class (main screen)
  * player/card/deck/game controller/player configuration/ basic ui /Single Player
  * and Multiplayer functionality -> configuring players depending on input.
@@ -12,7 +12,10 @@ package sample;
  * 1.3 Notes: / Assign association of imageview to specific cards
  * and changing the URL image corresponding to Card value / Created separate
  * ImageCardContainer.java class to hold ImageView and its corresponding Card.
- * Realized having an ImageCardContainer class was redundant.
+ * Created a GameRegulator Class to regulate rules and handle deck (distibute
+ * cards to players and shuffling, etc.)
+ * Realized having an ImageCardContainer class was redundant. (at least for
+ * referencing the card. Useful though because of array)
  * Successfully Associated Instance of ImageView with correct url, as well as
  * the corresponding player and the player's hands.
  */
@@ -84,50 +87,28 @@ public class GameController implements Initializable {
                 players[j].receiveCard(temp);
             }
         }
-//        imageList[0] = new ImageCardContainer(card1);
-//        imageList[1] = new ImageCardContainer(card2);
-//        imageList[2] = new ImageCardContainer(card3);
-//        imageList[3] = new ImageCardContainer(card4);
-//        imageList[4] = new ImageCardContainer(card5);
-//        imageList[5] = new ImageCardContainer(card6);
-//        imageList[6] = new ImageCardContainer(card7);
-//        imageList[7] = new ImageCardContainer(card8);
-//        imageList[8] = new ImageCardContainer(card9);
-//        imageList[9] = new ImageCardContainer(card10);
-//        imageList[10] = new ImageCardContainer(card11);
-//        imageList[11] = new ImageCardContainer(card12);
-//        imageList[12] = new ImageCardContainer(card13);
+        imageList[0] = new ImageCardContainer(card1);
+        imageList[1] = new ImageCardContainer(card2);
+        imageList[2] = new ImageCardContainer(card3);
+        imageList[3] = new ImageCardContainer(card4);
+        imageList[4] = new ImageCardContainer(card5);
+        imageList[5] = new ImageCardContainer(card6);
+        imageList[6] = new ImageCardContainer(card7);
+        imageList[7] = new ImageCardContainer(card8);
+        imageList[8] = new ImageCardContainer(card9);
+        imageList[9] = new ImageCardContainer(card10);
+        imageList[10] = new ImageCardContainer(card11);
+        imageList[11] = new ImageCardContainer(card12);
+        imageList[12] = new ImageCardContainer(card13);
 
-//        for (int i = 0; i < 13; i++) {
-//            imageList[i].setCard(game.assignCard());
-//        }
+        for (int i = 0; i < 13; i++) {
+            imageList[i].setCard(game.assignCard()); //For temporary use.
+        }
 
-        card1.setImage(new Image(getClass().getResourceAsStream("/resources/"
-                + players[0].returnHand().get(0).toString()+ ".png")));
-        card2.setImage(new Image(getClass().getResourceAsStream("/resources/"
-                + players[0].returnHand().get(1).toString()+ ".png")));
-        card3.setImage(new Image(getClass().getResourceAsStream("/resources/"
-                + players[0].returnHand().get(2).toString()+ ".png")));
-        card4.setImage(new Image(getClass().getResourceAsStream("/resources/"
-                + players[0].returnHand().get(3).toString()+ ".png")));
-        card5.setImage(new Image(getClass().getResourceAsStream("/resources/"
-                + players[0].returnHand().get(4).toString()+ ".png")));
-        card6.setImage(new Image(getClass().getResourceAsStream("/resources/"
-                + players[0].returnHand().get(5).toString()+ ".png")));
-        card7.setImage(new Image(getClass().getResourceAsStream("/resources/"
-                + players[0].returnHand().get(6).toString()+ ".png")));
-        card8.setImage(new Image(getClass().getResourceAsStream("/resources/"
-                + players[0].returnHand().get(7).toString()+ ".png")));
-        card9.setImage(new Image(getClass().getResourceAsStream("/resources/"
-                + players[0].returnHand().get(8).toString()+ ".png")));
-        card10.setImage(new Image(getClass().getResourceAsStream("/resources/"
-                + players[0].returnHand().get(9).toString()+ ".png")));
-        card11.setImage(new Image(getClass().getResourceAsStream("/resources/"
-                + players[0].returnHand().get(10).toString()+ ".png")));
-        card12.setImage(new Image(getClass().getResourceAsStream("/resources/"
-                + players[0].returnHand().get(11).toString()+ ".png")));
-        card13.setImage(new Image(getClass().getResourceAsStream("/resources/"
-                + players[0].returnHand().get(12).toString()+ ".png")));
+        for (int i = 0; i < 13; i++) {
+            imageList[i].getImageView().setImage(new Image(getClass().getResourceAsStream("/resources/"
+            + players[0].returnHand().get(i).toString() + ".png")));
+        }
 
         //new ImageView(new Image(getClass().getResourceAsStream("QueenOfClubs.jpg"),63.5, 88.9, true, true));  This is how
         //you do it manually.
