@@ -33,23 +33,6 @@ public class Deck {
         return deck;
     }
 
-    public void shuffle() {
-        Random random = new Random();
-        Card temp;
-        index = 0;
-        int index1 = 0;
-        for (int i = deck.size() - 1; i > 0; i--) {
-            index1 = random.nextInt(i + 1);
-            temp = deck.get(index1);
-            deck.set(index1, deck.get(i));
-            deck.set(i,temp);
-        }
-    }
-
-    public Card dealCard() {
-            return deck.get(index++);
-    }
-
     public int getSize() {
          return deck.size();
     }

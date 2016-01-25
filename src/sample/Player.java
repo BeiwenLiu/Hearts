@@ -18,7 +18,7 @@ public class Player {
         this.points = points;
     }
 
-    public void dealHand(Card card) {
+    public void receiveCard(Card card) {
         hand.add(card);
     }
 
@@ -38,11 +38,9 @@ public class Player {
         return points;
     }
 
-    public Card playCard() {
-        Scanner scanner = new Scanner(System.in);
-        String a = scanner.nextLine();
-        return hand.get(0);
-    }
+//    public Card playCard() {
+//
+//    }
 
     public ArrayList<Card> returnHand() {
         return hand;
