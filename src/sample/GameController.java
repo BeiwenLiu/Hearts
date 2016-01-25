@@ -101,6 +101,8 @@ public class GameController implements Initializable {
         imageList[11] = new ImageCardContainer(card12);
         imageList[12] = new ImageCardContainer(card13);
 
+        //Why isnt it committing
+
         for (int i = 0; i < 13; i++) {
             imageList[i].setCard(game.assignCard()); //For temporary use.
         }
