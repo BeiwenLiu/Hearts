@@ -21,6 +21,8 @@ import java.util.ResourceBundle;
  * Created by user on 1/23/2016.
  */
 public class PlayerConfigurationController implements Initializable{
+    private final String[] DEFAULT_NAMES = {"You","James", "Thomas", "Daniel"};
+    private final String[] DEFAULT_COLORS = {"Red", "Green", "Blue", "Yellow"};
 
     @FXML
     private TextField name1;
@@ -57,15 +59,25 @@ public class PlayerConfigurationController implements Initializable{
         Main.players[2] = new Player (name3.getText(),choiceBox2.getValue());
         Main.players[3] = new Player (name4.getText(),choiceBox3.getValue());
 
+
+        Scene game = new Scene(FXMLLoader.load(getClass().getResource("Game.fxml")));
+        Stage initializer = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+        initializer.setScene(game);
+        initializer.show();
+
+    }
+
+    @FXML
+    public void shortcut(Event event) throws IOException {
+        for (int i = 0; i < DEFAULT_NAMES.length; i++) {
+            Main.players[i] = new Player(DEFAULT_NAMES[i],DEFAULT_COLORS[i]);
+        }
+
         Scene game = new Scene(FXMLLoader.load(getClass().getResource("Game.fxml")));
         Stage initializer = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
         initializer.setScene(game);
         initializer.show();
     }
-
-
-
-
 
 
 }

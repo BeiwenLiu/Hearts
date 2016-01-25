@@ -1,5 +1,8 @@
 package sample;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 /**
  * Created by user on 1/23/2016.
  */
@@ -7,7 +10,7 @@ public class Player {
     private String name;
     private String color;
     private int points;
-    private Card[] hand;
+    private ArrayList<Card> hand = new ArrayList<>();
 
     public Player(String name, String color, int points) {
         this.name = name;
@@ -15,8 +18,8 @@ public class Player {
         this.points = points;
     }
 
-    public void dealHand() {
-
+    public void dealHand(Card card) {
+        hand.add(card);
     }
 
     public Player(String name, String color) {
@@ -33,6 +36,12 @@ public class Player {
 
     public int getPoints() {
         return points;
+    }
+
+    public Card playCard() {
+        Scanner scanner = new Scanner(System.in);
+        String a = scanner.nextLine();
+        return hand.get(0);
     }
 
     @Override
