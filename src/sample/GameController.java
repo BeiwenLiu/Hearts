@@ -1,15 +1,18 @@
 package sample;
 /**
  * @author Beiwen Liu
- * @version 1.3
+ * @version 1.5
  * 1.0 Notes: Implemented Basic structure of sample class (main screen)
  * player/card/deck/game controller/player configuration/ basic ui /Single Player
  * and Multiplayer functionality -> configuring players depending on input.
+ *
  * 1.1 Notes: Player configuration choice box / Toggle features /Added instances of rules (q-breaks, jack of diamonds, etc.)
  * deck shuffling / Pointer Reference (to the player who plays first)
+ *
  * 1.2 Notes: Drag and Drop functionality for Image View/ Introduction to
  * SceneBuilder and CSS association
- * 1.3 Notes: / Assign association of imageview to specific cards
+ *
+ * 1.3 Notes: Assign association of imageview to specific cards
  * and changing the URL image corresponding to Card value / Created separate
  * ImageCardContainer.java class to hold ImageView and its corresponding Card.
  * Created a GameRegulator Class to regulate rules and handle deck (distibute
@@ -18,16 +21,30 @@ package sample;
  * referencing the card. Useful though because of array)
  * Successfully Associated Instance of ImageView with correct url, as well as
  * the corresponding player and the player's hands.
- *
- *
  * Start method should only be invoked if you are creating scene manually I think.
  * imageView can be easily added onto a border pane.
+ *
  * 1.4: Add imageView to border pane and centering along area. Add full imageList
  * that contains all 52 cards. Added label for each player from 1-4 and their
  * corresponding imageViews. Updated label to show name of player.
  * Centered components of border pane
+ * GameRegulator will increment player round.
  *
- * working on: not having the size change, how to regulate rounds.
+ * 1.5 GameRegulator changes: Accept card method where it will add cards to a container
+ * within Game Regulator class. Created inner class CardIndexContainer that keeps track of the
+ * Card and who plays it. Determine the amount of points allotted to the player that plays
+ * the highest card. Made method that determines who plays next, depending on the selection of the cards.
+ * GameController: Added functionality that only allows the player to play their cards
+ * during their turn only.
+ *
+ * Created separate method for starting round (This will enable drag and drop on the image views)
+ * Created separate regulateround method to regulate the enabling and disabling of imageviews
+ * depending on the pointer.
+ *
+ *1.6 Fixed Adjustments with enabling imageView.
+ * Trying to fix player's inventory of cards.
+
+
  */
 
 import javafx.application.Application;
@@ -58,8 +75,8 @@ import java.util.ResourceBundle;
  *
  * Created by user on 1/23/2016.
  */
-public class GameController implements Initializable  {
-    private final String[] DEFAULT_NAMES = {"You","James", "Thomas", "Daniel"};
+public class GameController implements Initializable {
+    private final String[] DEFAULT_NAMES = {"You", "James", "Thomas", "Daniel"};
     private final String[] DEFAULT_COLORS = {"Red", "Green", "Blue", "Yellow"};
     public Label player1;
     public Label player2;
@@ -150,12 +167,14 @@ public class GameController implements Initializable  {
         for (int i = 0; i < HAND_SIZE; i++) {
             for (int j = 0; j < players.length; j++) {
                 Card temp = game.dealCard();
-                if (temp.toString().equals("Two of Clubs")) {
+                if (temp.toString().equals("TwoOfClubs")) {
                     pointer = j; // This pointer will indicate the index of the player that will start first.
                 }
                 players[j].receiveCard(temp);
             }
         }
+
+        System.out.println("Pointer: " + pointer);
         imageList[0] = new ImageCardContainer(card1);
         imageList[1] = new ImageCardContainer(card2);
         imageList[2] = new ImageCardContainer(card3);
@@ -210,11 +229,9 @@ public class GameController implements Initializable  {
         imageList[51] = new ImageCardContainer(card52);
 
         //Why isnt it committing
-
         for (int i = 0; i < imageList.length; i++) {
             imageList[i].setCard(game.assignCard()); //For temporary use.
         }
-
         int index = 0;
         for (int i = 0; i < 13; i++) {
             for (int j = 0; j < players.length; j++) {
@@ -223,11 +240,34 @@ public class GameController implements Initializable  {
             }
         }
 
-        //new ImageView(new Image(getClass().getResourceAsStream("QueenOfClubs.jpg"),63.5, 88.9, true, true));  This is how
-        //you do it manually.
-        //imageList[1].setImage(new Image(getClass().getResourceAsStream("QueenOfClubs.jpg"))); //This will change the
-        //image view depending on the type of card!! I FINALLY GOT IT TO WORK.
-        //        player1.setText(players[0].returnHand().get(0).toString());
+        for (int i = 0; i < 52; i++) {
+            int za = i + 1;
+            System.out.println("card" + za + ": " + imageList[i].getCard());
+        }
+
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 13; j++) {
+                System.out.println("Player" + i + ": " + "card: " + players[i].returnHand().get(j));
+            }
+        }
+
+
+
+        startMatch();
+    }
+
+    //        for (int round = 0; round < HAND_SIZE; round++) {
+//            for (int playerRound = 0; playerRound < players.length; playerRound++) {
+//                if (pointer == 0) {
+//            }
+//        }
+    //new ImageView(new Image(getClass().getResourceAsStream("QueenOfClubs.jpg"),63.5, 88.9, true, true));  This is how
+    //you do it manually.
+    //imageList[1].setImage(new Image(getClass().getResourceAsStream("QueenOfClubs.jpg"))); //This will change the
+    //image view depending on the type of card!! I FINALLY GOT IT TO WORK.
+    //        player1.setText(players[0].returnHand().get(0).toString());
+    public void startMatch() {
+        roundRegulate(pointer);
         imageList[0].getImageView().setOnDragDetected(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
                 /* drag was detected, start drag-and-drop gesture*/
@@ -1528,6 +1568,7 @@ public class GameController implements Initializable  {
                 event.consume();
             }
         });
+
         //------------------------------------------------------------------------
         target.setOnDragOver(new EventHandler<DragEvent>() {
             public void handle(DragEvent event) {
@@ -1585,22 +1626,47 @@ public class GameController implements Initializable  {
                             target.setRight(imageList[i].getImageView());
                             BorderPane.setAlignment(imageList[i].getImageView(), Pos.CENTER);
                         }
+                        success = true;
+
                     }
                 }
-
+                pointer = game.incrementPlayerRound(pointer);
+                System.out.println("Pointer value: " + pointer);
+                roundRegulate(pointer);
                 /* let the source know whether the string was successfully
                  * transferred and used */
                 event.setDropCompleted(success);
-
                 event.consume();
             }
         });
 
 
-
-
-
-//        MouseControlUtil.makeDraggable(player1); //MouseControlUtil makes an item draggable.
     }
+
+
+    public void roundRegulate(int pointer) {
+        for (int j = 0; j < imageList.length; j++) {
+            imageList[j].getImageView().setDisable(true);
+        }
+        if (pointer == 0) {
+            for (int i = 0; i < 13; i++) {
+                imageList[i].getImageView().setDisable(false);
+            }
+        } else if (pointer == 1) {
+            for (int i = 13; i < 26; i++) {
+                imageList[i].getImageView().setDisable(false);
+            }
+        } else if (pointer == 2) {
+            for (int i = 26; i < 39; i++) {
+                imageList[i].getImageView().setDisable(false);
+            }
+        } else if (pointer == 3) {
+            for (int i = 39; i < 52; i++ ){
+                imageList[i].getImageView().setDisable(false);
+            }
+        }
+    }
+//        MouseControlUtil.makeDraggable(player1); //MouseControlUtil makes an item draggable.
 }
+
 
