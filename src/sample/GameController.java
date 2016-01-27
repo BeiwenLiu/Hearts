@@ -45,7 +45,9 @@ package sample;
  * Fixed player's inventory of cards that corresponds to the correect imageView.
  *
  * 1.7 Implement end of each round control. Giving first play to the highest card on the table.
- * Clearing border pane after every round.
+ * Clearing border pane after every round. Fixed Index out of bounds for adding a player's card
+ * to the gameRegulator class using MOD. Successfully regulated rounds using game class by
+ * calculating the highest card based on the first suit played per round.
  *
 
  */
@@ -155,7 +157,6 @@ public class GameController implements Initializable {
                 players[i] = new Player(DEFAULT_NAMES[i], DEFAULT_COLORS[i]);
             }
         }
-
         player1.setText(players[0].getName());
         player2.setText(players[1].getName());
         player3.setText(players[2].getName());
@@ -241,20 +242,6 @@ public class GameController implements Initializable {
                 index++;
             }
         }
-
-        for (int i = 0; i < 52; i++) {
-            int za = i + 1;
-            System.out.println("card" + za + ": " + imageList[i].getCard());
-        }
-
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 13; j++) {
-                System.out.println("Player" + i + ": " + "card: " + players[i].returnHand().get(j));
-            }
-        }
-
-
-
         startMatch();
     }
 
@@ -1575,7 +1562,7 @@ public class GameController implements Initializable {
         target.setOnDragOver(new EventHandler<DragEvent>() {
             public void handle(DragEvent event) {
                 /* data is dragged over the target */
-                System.out.println("onDragOver");
+//                System.out.println("onDragOver");
                 /* accept it only if it is  not dragged from the same node
                  * and if it has a string data */
                 if (event.getGestureSource() != target &&
@@ -1589,7 +1576,7 @@ public class GameController implements Initializable {
         target.setOnDragEntered(new EventHandler<DragEvent>() {
             public void handle(DragEvent event) {
                 /* the drag-and-drop gesture entered the target */
-                System.out.println("onDragEntered");
+//                System.out.println("onDragEntered");
                 /* show to the user that it is an actual gesture target */
                 if (event.getGestureSource() != target &&
                         event.getDragboard().hasString()) {
@@ -1609,7 +1596,7 @@ public class GameController implements Initializable {
             public void handle(DragEvent event) {
 
                 /* data dropped */
-                System.out.println("onDragDropped");
+//                System.out.println("onDragDropped");
                 boolean success = false;
                 /* if there is a string data on dragboard, read it and use it */
                 Dragboard dragboard = event.getDragboard();
@@ -1630,7 +1617,9 @@ public class GameController implements Initializable {
                         }
                         success = true;
                         round++;
-                        game.acceptCard(players[pointer].playCard(i), pointer);
+                        int temp = i % 13;
+                        System.out.println("GAME SCREEN: " + players[pointer].returnHand().get(temp).getCardValue());
+                        game.acceptCard(players[pointer].returnHand().get(temp), pointer);
                     }
                 }
                 if (round == 4) {
@@ -1639,6 +1628,7 @@ public class GameController implements Initializable {
                     System.out.println("Executed");
                     pointer = game.computeHighestPlayer();
                     players[pointer].setPoints(game.getPoints());
+                    System.out.println("New Pointer: " + pointer);
                 } else {
                     pointer = game.incrementPlayerRound(pointer);
                     System.out.println("Pointer value: " + pointer);

@@ -86,9 +86,10 @@ public class GameRegulator {
     }
 
     public void acceptCard(Card card, int pointer) {
-        if (index >= 3) {
+        if (index >= 4) {
             index = 0;
         }
+        System.out.println("Adding to index: " + index);
         container[index].setCard(card);
         container[index].setPointer(pointer);
         index++;
