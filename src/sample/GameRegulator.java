@@ -16,6 +16,10 @@ public class GameRegulator {
     //the corresponding card indicies to the corresponding imageView.
     CardIndexContainer[] container = new CardIndexContainer[4];
 
+    public int getPoints() {
+        return points;
+    }
+
     private class CardIndexContainer {
         private Card card;
         private int index;

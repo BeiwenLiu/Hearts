@@ -42,8 +42,11 @@ package sample;
  * depending on the pointer.
  *
  *1.6 Fixed Adjustments with enabling imageView.
- * Trying to fix player's inventory of cards.
-
+ * Fixed player's inventory of cards that corresponds to the correect imageView.
+ *
+ * 1.7 Implement end of each round control. Giving first play to the highest card on the table.
+ * Clearing border pane after every round.
+ *
 
  */
 
@@ -142,6 +145,7 @@ public class GameController implements Initializable {
     private final int HAND_SIZE = 13;
     private int pointer;
     private GameRegulator game = new GameRegulator();
+    private int round = 0;
 
 
     @Override
@@ -228,15 +232,13 @@ public class GameController implements Initializable {
         imageList[50] = new ImageCardContainer(card51);
         imageList[51] = new ImageCardContainer(card52);
 
-        //Why isnt it committing
-        for (int i = 0; i < imageList.length; i++) {
-            imageList[i].setCard(game.assignCard()); //For temporary use.
-        }
         int index = 0;
-        for (int i = 0; i < 13; i++) {
-            for (int j = 0; j < players.length; j++) {
-                imageList[index++].getImageView().setImage(new Image(getClass().getResourceAsStream("/resources/"
-                        + players[j].returnHand().get(i).toString() + ".png"))); //This assigns all the images to the imageView
+        for (int i = 0; i < players.length; i++) {
+            for (int j = 0; j < 13; j++) {
+                imageList[index].getImageView().setImage(new Image(getClass().getResourceAsStream("/resources/"
+                        + players[i].returnHand().get(j).toString() + ".png"))); //This assigns all the images to the imageView
+                imageList[index].setCard(players[i].returnHand().get(j));
+                index++;
             }
         }
 
@@ -1627,11 +1629,20 @@ public class GameController implements Initializable {
                             BorderPane.setAlignment(imageList[i].getImageView(), Pos.CENTER);
                         }
                         success = true;
-
+                        round++;
+                        game.acceptCard(players[pointer].playCard(i), pointer);
                     }
                 }
-                pointer = game.incrementPlayerRound(pointer);
-                System.out.println("Pointer value: " + pointer);
+                if (round == 4) {
+                    //Need to clear stage
+                    round = 0;
+                    System.out.println("Executed");
+                    pointer = game.computeHighestPlayer();
+                    players[pointer].setPoints(game.getPoints());
+                } else {
+                    pointer = game.incrementPlayerRound(pointer);
+                    System.out.println("Pointer value: " + pointer);
+                }
                 roundRegulate(pointer);
                 /* let the source know whether the string was successfully
                  * transferred and used */

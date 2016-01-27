@@ -38,12 +38,16 @@ public class Player {
         return points;
     }
 
-//    public Card playCard() {
-//
-//    }
+    public Card playCard(int index) {
+        return hand.remove(index);
+    }
 
     public ArrayList<Card> returnHand() {
         return hand;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
     }
 
     @Override
