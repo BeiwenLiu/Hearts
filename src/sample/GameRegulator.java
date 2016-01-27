@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 /**
- * Created by user on 1/23/2016.
+ * Created by Beiwen Liu on 1/23/2016.
  */
 public class GameRegulator {
     private int points;

@@ -49,10 +49,22 @@ package sample;
  * to the gameRegulator class using MOD. Successfully regulated rounds using game class by
  * calculating the highest card based on the first suit played per round.
  *
+ * Trying to implement timer so that the table will clear 1-2 seconds after the last
+ * card has been played so that players can see and analyze cards before it disappears.
+ * Currently using multi-threading with a Timer1 class, but failed due to
+ * discrepancy in thread type.
+ *
+ * Decided to use Platform.runlater because it uses JavaFX thread. Purely used to update GUI.
+ *
+ * Created private method that disables all the imageViews so that no one
+ * can play a card before the Table clears. Separated "roundRegulate to both conditional
+ * branches so that the one with round == 4, can disable all imageviews, and after 2 seconds
+ * it will renable them depending on who played the highest suit.
 
  */
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
@@ -69,16 +81,21 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import jfxtras.labs.util.event.MouseControlUtil;
+import java.util.Timer;
 
 
 import java.net.URL;
 import java.util.HashMap;
 import java.util.ResourceBundle;
+import java.util.TimerTask;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 /**
  *
  *
- * Created by user on 1/23/2016.
+ * Created by Beiwen Liu on 1/23/2016.
  */
 public class GameController implements Initializable {
     private final String[] DEFAULT_NAMES = {"You", "James", "Thomas", "Daniel"};
@@ -142,12 +159,14 @@ public class GameController implements Initializable {
     public ImageView card50;
     public ImageView card51;
     public ImageView card52;
+    private Timer1 timer = new Timer1();
     private Deck deck = new Deck();
     private Player[] players = Main.players;
     private final int HAND_SIZE = 13;
     private int pointer;
     private GameRegulator game = new GameRegulator();
     private int round = 0;
+    private int seconds = 2;
 
 
     @Override
@@ -1623,7 +1642,9 @@ public class GameController implements Initializable {
                     }
                 }
                 if (round == 4) {
+                    disableGUI();
                     //Need to clear stage
+                    updateTable();
                     round = 0;
                     System.out.println("Executed");
                     pointer = game.computeHighestPlayer();
@@ -1632,8 +1653,8 @@ public class GameController implements Initializable {
                 } else {
                     pointer = game.incrementPlayerRound(pointer);
                     System.out.println("Pointer value: " + pointer);
+                    roundRegulate(pointer);
                 }
-                roundRegulate(pointer);
                 /* let the source know whether the string was successfully
                  * transferred and used */
                 event.setDropCompleted(success);
@@ -1642,6 +1663,12 @@ public class GameController implements Initializable {
         });
 
 
+    }
+
+    private void disableGUI() {
+        for (int i = 0; i <imageList.length; i++) {
+            imageList[i].getImageView().setDisable(true);
+        }
     }
 
 
@@ -1668,6 +1695,45 @@ public class GameController implements Initializable {
         }
     }
 //        MouseControlUtil.makeDraggable(player1); //MouseControlUtil makes an item draggable.
+
+    private void updateTable(){
+
+        final ScheduledExecutorService scheduler
+                = Executors.newScheduledThreadPool(1);
+
+        scheduler.scheduleAtFixedRate(
+                new Runnable(){
+
+                    int counter = 0;
+
+                    @Override
+                    public void run() {
+                        counter++;
+                        if(counter<=2){
+
+                            Platform.runLater(new Runnable(){
+                                @Override
+                                public void run() {
+                                    System.out.println(counter);
+                                    target.setBottom(null);
+                                    target.setTop(null);
+                                    target.setLeft(null);
+                                    target.setRight(null);
+                                    roundRegulate(pointer);
+                                }
+                            });
+                        }
+
+                    }
+                },
+                1, //After this amount of seconds, run() will be executed.
+                1, //Not sure what this does.
+                TimeUnit.SECONDS);
+    }
+
+
+
+
 }
 
 

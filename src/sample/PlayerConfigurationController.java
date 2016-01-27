@@ -18,7 +18,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 /**
- * Created by user on 1/23/2016.
+ * Created by Beiwen Liu on 1/23/2016.
  */
 public class PlayerConfigurationController implements Initializable{
     private final String[] DEFAULT_NAMES = {"You","James", "Thomas", "Daniel"};

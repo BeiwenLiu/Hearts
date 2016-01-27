@@ -3,7 +3,7 @@ package sample;
 import javafx.scene.image.ImageView;
 
 /**
- * Created by BLiu on 1/25/2016.
+ * Created by Beiwen Liu on 1/25/2016.
  */
 public class ImageCardContainer {
     private ImageView imageView;
