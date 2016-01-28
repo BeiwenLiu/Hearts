@@ -22,7 +22,7 @@
       <ImageView fx:id="card2" fitHeight="88.9" fitWidth="63.5" layoutX="273.0" layoutY="671.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="card5" fitHeight="88.9" fitWidth="63.5" layoutX="463.0" layoutY="671.0" pickOnBounds="true" preserveRatio="true" />
       <BorderPane fx:id="target" layoutX="519.0" layoutY="262.0" prefHeight="266.7" prefWidth="266.7" style="-fx-border-color: black;" />
-      <Label fx:id="player2" layoutX="33.0" layoutY="401.0" rotate="90.0" text="Player2" />
+      <Label fx:id="player2" layoutX="25.0" layoutY="390.0" text="Player2" />
       <ImageView fx:id="card14" fitHeight="63.5" fitWidth="88.9" layoutX="88.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" />
       <ImageView fx:id="card15" fitHeight="63.5" fitWidth="88.9" layoutX="86.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" />
       <ImageView fx:id="card16" fitHeight="63.5" fitWidth="88.9" layoutX="88.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" />
@@ -62,7 +62,11 @@
       <ImageView fx:id="card50" fitHeight="63.5" fitWidth="88.9" layoutX="1144.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" />
       <ImageView fx:id="card51" fitHeight="63.5" fitWidth="88.9" layoutX="1142.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" />
       <ImageView fx:id="card52" fitHeight="63.5" fitWidth="88.9" layoutX="1144.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" />
-      <Label fx:id="player3" layoutX="620.0" layoutY="32.0" text="Player3" />
-      <Label fx:id="player4" layoutX="1222.0" layoutY="371.0" rotate="-90.0" text="Player4" />
+      <Label fx:id="player3" layoutX="614.0" layoutY="14.0" text="Player3" />
+      <Label fx:id="player4" layoutX="1222.0" layoutY="371.0" text="Player4" />
+      <Label fx:id="score1" layoutX="618.0" layoutY="854.0" style="-fx-border-color: black;" text="Score" />
+      <Label fx:id="score2" layoutX="28.0" layoutY="408.0" style="-fx-border-color: black;" text="Score" />
+      <Label fx:id="score3" layoutX="617.0" layoutY="31.0" style="-fx-border-color: black;" text="Score" />
+      <Label fx:id="score4" layoutX="1225.0" layoutY="389.0" style="-fx-border-color: black;" text="Score" />
    </children>
 </Pane>

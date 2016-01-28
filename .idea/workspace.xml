@@ -1,13 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/sample/GameController.java" line="1683" />
+    <bookmark url="file://$PROJECT_DIR$/src/sample/GameController.java" line="1770" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$1.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$10.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$100.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$100.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$101.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$101.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$102.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$102.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$103.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$103.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$104.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$104.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$105.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$105.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$106.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$106.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$107.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$107.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$108.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$108.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$109$1.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$109$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$109.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$109.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$11.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$12.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$13.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$14.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$15.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$16.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$16.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$17.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$17.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$18.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$18.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$19.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$19.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$2.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$20.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$20.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$21.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$21.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$22.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$22.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$23.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$23.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$24.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$24.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$25.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$25.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$26.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$26.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$27.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$27.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$28.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$28.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$29.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$29.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$3.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$30.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$30.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$31.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$31.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$32.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$32.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$33.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$33.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$34.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$34.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$35.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$35.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$36.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$36.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$37.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$37.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$38.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$38.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$39.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$39.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$4.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$40.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$40.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$41.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$41.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$42.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$42.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$43.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$43.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$44.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$44.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$45.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$45.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$46.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$46.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$47.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$47.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$48.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$48.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$49.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$49.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$5.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$50.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$50.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$51.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$51.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$52.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$52.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$53.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$53.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$54.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$54.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$55.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$55.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$56.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$56.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$57.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$57.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$58.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$58.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$59.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$59.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$6.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$60.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$60.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$61.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$61.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$62.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$62.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$63.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$63.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$64.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$64.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$65.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$65.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$66.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$66.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$67.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$67.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$68.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$68.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$69.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$69.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$7.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$70.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$70.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$71.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$71.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$72.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$72.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$73.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$73.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$74.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$74.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$75.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$75.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$76.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$76.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$77.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$77.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$78.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$78.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$79.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$79.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$8.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$80.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$80.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$81.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$81.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$82.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$82.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$83.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$83.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$84.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$84.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$85.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$85.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$86.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$86.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$87.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$87.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$88.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$88.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$89.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$89.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$9.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$90.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$90.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$91.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$91.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$92.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$92.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$93.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$93.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$94.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$94.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$95.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$95.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$96.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$96.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$97.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$97.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$98.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$98.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$99.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController$99.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameController.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hearts/sample/GameRegulator.class" afterPath="$PROJECT_DIR$/out/production/Hearts/sample/GameRegulator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Game.fxml" afterPath="$PROJECT_DIR$/src/sample/Game.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/GameController.java" afterPath="$PROJECT_DIR$/src/sample/GameController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/GameRegulator.java" afterPath="$PROJECT_DIR$/src/sample/GameRegulator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Player.java" afterPath="$PROJECT_DIR$/src/sample/Player.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -71,10 +182,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.4414169">
       <split-first>
         <leaf>
-          <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
+                <state vertical-scroll-proportion="0.2638889">
                   <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
                   <folding />
                 </state>
@@ -85,11 +196,18 @@
             <entry file="file://$PROJECT_DIR$/src/sample/Card.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+                  <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
                   <folding>
-                    <element signature="e#643#644#0" expanded="false" />
-                    <element signature="e#689#690#0" expanded="false" />
-                    <element signature="e#731#732#0" expanded="false" />
+                    <element signature="e#430#431#0" expanded="false" />
+                    <element signature="e#457#458#0" expanded="false" />
+                    <element signature="e#489#490#0" expanded="false" />
+                    <element signature="e#517#518#0" expanded="false" />
+                    <element signature="e#551#552#0" expanded="false" />
+                    <element signature="e#584#585#0" expanded="false" />
+                    <element signature="e#617#618#0" expanded="false" />
+                    <element signature="e#649#650#0" expanded="false" />
+                    <element signature="e#695#696#0" expanded="false" />
+                    <element signature="e#737#738#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -101,21 +219,21 @@
                 <state />
               </provider>
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+                <state vertical-scroll-proportion="-13.586206">
+                  <caret line="69" column="23" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="GameRegulator.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="GameRegulator.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/sample/GameRegulator.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.27530363">
-                  <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
                   <folding>
-                    <element signature="e#606#607#0" expanded="true" />
-                    <element signature="e#635#636#0" expanded="true" />
+                    <element signature="e#612#613#0" expanded="true" />
+                    <element signature="e#641#642#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -125,7 +243,7 @@
             <entry file="file://$PROJECT_DIR$/src/sample/PlayerConfigurationController.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+                  <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="68" selection-end-column="27" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -137,13 +255,13 @@
             <entry file="file://$PROJECT_DIR$/src/sample/Deck.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="22" column="84" selection-start-line="22" selection-start-column="84" selection-end-line="22" selection-end-column="84" />
+                  <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
                   <folding>
-                    <element signature="imports" expanded="false" />
-                    <element signature="e#1199#1200#0" expanded="false" />
-                    <element signature="e#1226#1227#0" expanded="false" />
-                    <element signature="e#1254#1255#0" expanded="false" />
-                    <element signature="e#1289#1290#0" expanded="false" />
+                    <element signature="e#1202#1203#0" expanded="false" />
+                    <element signature="e#1229#1230#0" expanded="false" />
+                    <element signature="e#1257#1258#0" expanded="false" />
+                    <element signature="e#1292#1293#0" expanded="false" />
+                    <marker date="1453905491000" expanded="false" signature="24:69" placeholder="..." />
                   </folding>
                 </state>
               </provider>
@@ -153,14 +271,10 @@
             <entry file="file://$PROJECT_DIR$/src/sample/Player.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+                  <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
                   <folding>
-                    <element signature="e#460#461#0" expanded="true" />
-                    <element signature="e#490#491#0" expanded="true" />
-                    <element signature="e#874#875#0" expanded="true" />
-                    <element signature="e#901#902#0" expanded="true" />
-                    <element signature="e#942#943#0" expanded="true" />
-                    <element signature="e#978#979#0" expanded="true" />
+                    <element signature="e#790#791#0" expanded="true" />
+                    <element signature="e#831#832#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -174,7 +288,7 @@
             <entry file="file://$PROJECT_DIR$/src/sample/HelloDragAndDrop.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+                  <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -183,8 +297,20 @@
           <file leaf-file-name="GameController.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/sample/GameController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.41497976">
-                  <caret line="1638" column="51" selection-start-line="1638" selection-start-column="51" selection-end-line="1638" selection-end-column="51" />
+                <state vertical-scroll-proportion="0.5659722">
+                  <caret line="69" column="67" selection-start-line="69" selection-start-column="67" selection-end-line="69" selection-end-column="67" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ImageCardContainer.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/sample/ImageCardContainer.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
                   <folding />
                 </state>
               </provider>
@@ -206,10 +332,8 @@
             <entry file="file://$PROJECT_DIR$/src/sample/Testing.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
-                  <folding>
-                    <element signature="imports" expanded="false" />
-                  </folding>
+                  <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -247,17 +371,20 @@
         <option value="$PROJECT_DIR$/src/sample/PlayerConfiguration.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/DragAndDropTest.java" />
-        <option value="$PROJECT_DIR$/src/sample/Testing.java" />
         <option value="$PROJECT_DIR$/src/sample/pane.css" />
         <option value="$PROJECT_DIR$/src/sample/HelloDragAndDrop.java" />
-        <option value="$PROJECT_DIR$/src/sample/ImageCardContainer.java" />
         <option value="$PROJECT_DIR$/src/sample/GameRules.java" />
-        <option value="$PROJECT_DIR$/src/sample/PlayerConfigurationController.java" />
         <option value="$PROJECT_DIR$/src/sample/Game.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Deck.java" />
-        <option value="$PROJECT_DIR$/src/sample/Card.java" />
-        <option value="$PROJECT_DIR$/src/sample/Player.java" />
         <option value="$PROJECT_DIR$/src/sample/GameRegulator.java" />
+        <option value="$PROJECT_DIR$/src/sample/Card.java" />
+        <option value="$PROJECT_DIR$/src/sample/ImageCardContainer.java" />
+        <option value="$PROJECT_DIR$/src/sample/PlayerConfigurationController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Testing.java" />
+        <option value="$PROJECT_DIR$/src/sample/TimerPractice.java" />
+        <option value="$PROJECT_DIR$/src/sample/Timer.java" />
+        <option value="$PROJECT_DIR$/src/sample/Timer1.java" />
+        <option value="$PROJECT_DIR$/src/sample/Player.java" />
         <option value="$PROJECT_DIR$/src/sample/GameController.java" />
       </list>
     </option>
@@ -274,8 +401,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-24" />
-    <option name="y" value="11" />
+    <option name="x" value="1595" />
     <option name="width" value="1586" />
     <option name="height" value="907" />
   </component>
@@ -307,8 +433,9 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -361,7 +488,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -636,24 +762,24 @@
     <option name="totallyTimeSpent" value="1302000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-24" y="11" width="1586" height="907" extended-state="0" />
+    <frame x="1595" y="0" width="1586" height="907" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31572166" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31484503" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34094617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3273196" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2300163" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16710354" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22464699" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33632863" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17693315" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -692,22 +818,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/HelloDragAndDrop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/GameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/SampleController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -721,10 +831,16 @@
     <entry file="file://$PROJECT_DIR$/src/sample/Testing.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Testing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -741,9 +857,16 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
           <folding>
-            <element signature="e#643#644#0" expanded="false" />
-            <element signature="e#689#690#0" expanded="false" />
-            <element signature="e#731#732#0" expanded="false" />
+            <element signature="e#430#431#0" expanded="false" />
+            <element signature="e#457#458#0" expanded="false" />
+            <element signature="e#489#490#0" expanded="false" />
+            <element signature="e#517#518#0" expanded="false" />
+            <element signature="e#551#552#0" expanded="false" />
+            <element signature="e#584#585#0" expanded="false" />
+            <element signature="e#617#618#0" expanded="false" />
+            <element signature="e#649#650#0" expanded="false" />
+            <element signature="e#695#696#0" expanded="false" />
+            <element signature="e#737#738#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -763,11 +886,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1199#1200#0" expanded="false" />
-            <element signature="e#1226#1227#0" expanded="false" />
-            <element signature="e#1254#1255#0" expanded="false" />
-            <element signature="e#1289#1290#0" expanded="false" />
+            <element signature="e#1202#1203#0" expanded="false" />
+            <element signature="e#1229#1230#0" expanded="false" />
+            <element signature="e#1257#1258#0" expanded="false" />
+            <element signature="e#1292#1293#0" expanded="false" />
+            <marker date="1453905491000" expanded="false" signature="24:69" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -777,12 +900,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
           <folding>
-            <element signature="e#460#461#0" expanded="true" />
-            <element signature="e#490#491#0" expanded="true" />
-            <element signature="e#874#875#0" expanded="true" />
-            <element signature="e#901#902#0" expanded="true" />
-            <element signature="e#942#943#0" expanded="true" />
-            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+            <element signature="e#831#832#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -791,7 +910,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -830,9 +951,16 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
           <folding>
-            <element signature="e#643#644#0" expanded="false" />
-            <element signature="e#689#690#0" expanded="false" />
-            <element signature="e#731#732#0" expanded="false" />
+            <element signature="e#430#431#0" expanded="false" />
+            <element signature="e#457#458#0" expanded="false" />
+            <element signature="e#489#490#0" expanded="false" />
+            <element signature="e#517#518#0" expanded="false" />
+            <element signature="e#551#552#0" expanded="false" />
+            <element signature="e#584#585#0" expanded="false" />
+            <element signature="e#617#618#0" expanded="false" />
+            <element signature="e#649#650#0" expanded="false" />
+            <element signature="e#695#696#0" expanded="false" />
+            <element signature="e#737#738#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -862,11 +990,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1199#1200#0" expanded="false" />
-            <element signature="e#1226#1227#0" expanded="false" />
-            <element signature="e#1254#1255#0" expanded="false" />
-            <element signature="e#1289#1290#0" expanded="false" />
+            <element signature="e#1202#1203#0" expanded="false" />
+            <element signature="e#1229#1230#0" expanded="false" />
+            <element signature="e#1257#1258#0" expanded="false" />
+            <element signature="e#1292#1293#0" expanded="false" />
+            <marker date="1453905491000" expanded="false" signature="24:69" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -876,12 +1004,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
           <folding>
-            <element signature="e#460#461#0" expanded="true" />
-            <element signature="e#490#491#0" expanded="true" />
-            <element signature="e#874#875#0" expanded="true" />
-            <element signature="e#901#902#0" expanded="true" />
-            <element signature="e#942#943#0" expanded="true" />
-            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+            <element signature="e#831#832#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -921,9 +1045,16 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
           <folding>
-            <element signature="e#643#644#0" expanded="false" />
-            <element signature="e#689#690#0" expanded="false" />
-            <element signature="e#731#732#0" expanded="false" />
+            <element signature="e#430#431#0" expanded="false" />
+            <element signature="e#457#458#0" expanded="false" />
+            <element signature="e#489#490#0" expanded="false" />
+            <element signature="e#517#518#0" expanded="false" />
+            <element signature="e#551#552#0" expanded="false" />
+            <element signature="e#584#585#0" expanded="false" />
+            <element signature="e#617#618#0" expanded="false" />
+            <element signature="e#649#650#0" expanded="false" />
+            <element signature="e#695#696#0" expanded="false" />
+            <element signature="e#737#738#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -953,11 +1084,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1199#1200#0" expanded="false" />
-            <element signature="e#1226#1227#0" expanded="false" />
-            <element signature="e#1254#1255#0" expanded="false" />
-            <element signature="e#1289#1290#0" expanded="false" />
+            <element signature="e#1202#1203#0" expanded="false" />
+            <element signature="e#1229#1230#0" expanded="false" />
+            <element signature="e#1257#1258#0" expanded="false" />
+            <element signature="e#1292#1293#0" expanded="false" />
+            <marker date="1453905491000" expanded="false" signature="24:69" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -967,12 +1098,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
           <folding>
-            <element signature="e#460#461#0" expanded="true" />
-            <element signature="e#490#491#0" expanded="true" />
-            <element signature="e#874#875#0" expanded="true" />
-            <element signature="e#901#902#0" expanded="true" />
-            <element signature="e#942#943#0" expanded="true" />
-            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+            <element signature="e#831#832#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -981,7 +1108,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1018,7 +1147,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1027,9 +1158,16 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
           <folding>
-            <element signature="e#643#644#0" expanded="false" />
-            <element signature="e#689#690#0" expanded="false" />
-            <element signature="e#731#732#0" expanded="false" />
+            <element signature="e#430#431#0" expanded="false" />
+            <element signature="e#457#458#0" expanded="false" />
+            <element signature="e#489#490#0" expanded="false" />
+            <element signature="e#517#518#0" expanded="false" />
+            <element signature="e#551#552#0" expanded="false" />
+            <element signature="e#584#585#0" expanded="false" />
+            <element signature="e#617#618#0" expanded="false" />
+            <element signature="e#649#650#0" expanded="false" />
+            <element signature="e#695#696#0" expanded="false" />
+            <element signature="e#737#738#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1039,11 +1177,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1199#1200#0" expanded="false" />
-            <element signature="e#1226#1227#0" expanded="false" />
-            <element signature="e#1254#1255#0" expanded="false" />
-            <element signature="e#1289#1290#0" expanded="false" />
+            <element signature="e#1202#1203#0" expanded="false" />
+            <element signature="e#1229#1230#0" expanded="false" />
+            <element signature="e#1257#1258#0" expanded="false" />
+            <element signature="e#1292#1293#0" expanded="false" />
+            <marker date="1453905491000" expanded="false" signature="24:69" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1053,12 +1191,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
           <folding>
-            <element signature="e#460#461#0" expanded="true" />
-            <element signature="e#490#491#0" expanded="true" />
-            <element signature="e#874#875#0" expanded="true" />
-            <element signature="e#901#902#0" expanded="true" />
-            <element signature="e#942#943#0" expanded="true" />
-            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+            <element signature="e#831#832#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1114,14 +1248,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/PlayerConfiguration.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -1133,37 +1259,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Testing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Game.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Deck.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="84" selection-start-line="22" selection-start-column="84" selection-end-line="22" selection-end-column="84" />
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1199#1200#0" expanded="false" />
-            <element signature="e#1226#1227#0" expanded="false" />
-            <element signature="e#1254#1255#0" expanded="false" />
-            <element signature="e#1289#1290#0" expanded="false" />
+            <element signature="e#1202#1203#0" expanded="false" />
+            <element signature="e#1229#1230#0" expanded="false" />
+            <element signature="e#1257#1258#0" expanded="false" />
+            <element signature="e#1292#1293#0" expanded="false" />
+            <marker date="1453905491000" expanded="false" signature="24:69" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1171,12 +1276,27 @@
     <entry file="file://$PROJECT_DIR$/src/sample/Card.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
           <folding>
-            <element signature="e#643#644#0" expanded="false" />
-            <element signature="e#689#690#0" expanded="false" />
-            <element signature="e#731#732#0" expanded="false" />
+            <element signature="e#430#431#0" expanded="false" />
+            <element signature="e#457#458#0" expanded="false" />
+            <element signature="e#489#490#0" expanded="false" />
+            <element signature="e#517#518#0" expanded="false" />
+            <element signature="e#551#552#0" expanded="false" />
+            <element signature="e#584#585#0" expanded="false" />
+            <element signature="e#617#618#0" expanded="false" />
+            <element signature="e#649#650#0" expanded="false" />
+            <element signature="e#695#696#0" expanded="false" />
+            <element signature="e#737#738#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/ImageCardContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1190,55 +1310,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/HelloDragAndDrop.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Testing.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/PlayerConfigurationController.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/HelloDragAndDrop.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/GameRegulator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#612#613#0" expanded="true" />
+            <element signature="e#641#642#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Game.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.586206">
+          <caret line="69" column="23" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+          <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
           <folding>
-            <element signature="e#460#461#0" expanded="true" />
-            <element signature="e#490#491#0" expanded="true" />
-            <element signature="e#874#875#0" expanded="true" />
-            <element signature="e#901#902#0" expanded="true" />
-            <element signature="e#942#943#0" expanded="true" />
-            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+            <element signature="e#831#832#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/GameRegulator.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/PlayerConfigurationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27530363">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="68" selection-end-column="27" />
           <folding>
-            <element signature="e#606#607#0" expanded="true" />
-            <element signature="e#635#636#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2638889">
+          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/GameController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41497976">
-          <caret line="1638" column="51" selection-start-line="1638" selection-start-column="51" selection-end-line="1638" selection-end-column="51" />
-          <folding />
+        <state vertical-scroll-proportion="0.5659722">
+          <caret line="69" column="67" selection-start-line="69" selection-start-column="67" selection-end-line="69" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

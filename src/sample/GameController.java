@@ -1,7 +1,7 @@
 package sample;
 /**
  * @author Beiwen Liu
- * @version 1.5
+ * @version 1.8
  * 1.0 Notes: Implemented Basic structure of sample class (main screen)
  * player/card/deck/game controller/player configuration/ basic ui /Single Player
  * and Multiplayer functionality -> configuring players depending on input.
@@ -59,13 +59,21 @@ package sample;
  * Created private method that disables all the imageViews so that no one
  * can play a card before the Table clears. Separated "roundRegulate to both conditional
  * branches so that the one with round == 4, can disable all imageviews, and after 2 seconds
- * it will renable them depending on who played the highest suit.
-
+ * it will re-enable them depending on who played the highest suit.
+ *
+ * Bug: Sometimes it would clear the table after 3 cards have been played. Fixed it by
+ * setting the delay or 2 / 1 seconds and then running the command once.
+ *
+ * 1.8 Configure Score -> both GUI and system tracking.
+ * Added method in player that adds to existing points.
+ * At the end of each round (where all 52 cards are played), the gameController
+ * will open a new screen that represents the score of the players.
  */
 
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.Group;
@@ -81,6 +89,8 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import jfxtras.labs.util.event.MouseControlUtil;
+
+import java.io.IOException;
 import java.util.Timer;
 
 
@@ -104,6 +114,10 @@ public class GameController implements Initializable {
     public Label player2;
     public Label player3;
     public Label player4;
+    public Label score1;
+    public Label score2;
+    public Label score3;
+    public Label score4;
     private ImageCardContainer[] imageList = new ImageCardContainer[52];
     public BorderPane target;
     public Pane gameView;
@@ -167,6 +181,7 @@ public class GameController implements Initializable {
     private GameRegulator game = new GameRegulator();
     private int round = 0;
     private int seconds = 2;
+    private int counter = 0;
 
 
     @Override
@@ -1617,6 +1632,7 @@ public class GameController implements Initializable {
                 /* data dropped */
 //                System.out.println("onDragDropped");
                 boolean success = false;
+                counter++;
                 /* if there is a string data on dragboard, read it and use it */
                 Dragboard dragboard = event.getDragboard();
                 for (int i = 0; i < imageList.length; i++) {
@@ -1641,28 +1657,36 @@ public class GameController implements Initializable {
                         game.acceptCard(players[pointer].returnHand().get(temp), pointer);
                     }
                 }
+                event.setDropCompleted(success);
+                event.consume();
                 if (round == 4) {
+                    round = 0;
                     disableGUI();
                     //Need to clear stage
                     updateTable();
-                    round = 0;
-                    System.out.println("Executed");
                     pointer = game.computeHighestPlayer();
                     players[pointer].setPoints(game.getPoints());
-                    System.out.println("New Pointer: " + pointer);
                 } else {
                     pointer = game.incrementPlayerRound(pointer);
                     System.out.println("Pointer value: " + pointer);
                     roundRegulate(pointer);
                 }
+
+                if (counter == 52) {
+                    Scene game = null;
+                    try {
+                        game = new Scene(FXMLLoader.load(getClass().getResource("PlayerConfiguration.fxml")));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    Stage initializer = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+                    initializer.setScene(game);
+                    initializer.show();
+                }
                 /* let the source know whether the string was successfully
                  * transferred and used */
-                event.setDropCompleted(success);
-                event.consume();
             }
         });
-
-
     }
 
     private void disableGUI() {
@@ -1709,7 +1733,7 @@ public class GameController implements Initializable {
                     @Override
                     public void run() {
                         counter++;
-                        if(counter<=2){
+                        if(counter<=1){
 
                             Platform.runLater(new Runnable(){
                                 @Override
@@ -1720,6 +1744,13 @@ public class GameController implements Initializable {
                                     target.setLeft(null);
                                     target.setRight(null);
                                     roundRegulate(pointer);
+                                    score1.setText(Integer.toString(players[0].getPoints()));
+                                    score2.setText(Integer.toString(players[1].getPoints()));
+                                    score3.setText(Integer.toString(players[2].getPoints()));
+                                    score4.setText(Integer.toString(players[3].getPoints()));
+                                    System.out.println("Executed");
+                                    System.out.println("New Pointer: " + pointer);
+                                    System.out.println("---------------------------------------------");
                                 }
                             });
                         }
