@@ -76,7 +76,9 @@ package sample;
  * Game will return an int array indicating which indicies of the image view to disable.
  * GameController will applyRestrictions(array) to the array.
  *
- *
+ *1.10 Added method to player that re-arranges the player's hand of cards
+ * to the suit and card value. Method reArrange() in player also uses a selection
+ * sort algorithm to sort the cards in increasing order depending on the card value.
  */
 
 import javafx.application.Application;
@@ -219,6 +221,11 @@ public class GameController implements Initializable {
                 Main.players[j].receiveCard(temp);
             }
         }
+
+        for (int i = 0; i < Main.players.length; i++) {
+            Main.players[i].reArrangeCards();
+        }
+
 
         System.out.println("Pointer: " + pointer);
         imageList[0] = new ImageCardContainer(card1);
