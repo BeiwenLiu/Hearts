@@ -1,7 +1,7 @@
 package sample;
 /**
  * @author Beiwen Liu
- * @version 1.8
+ * @version 1.9
  * 1.0 Notes: Implemented Basic structure of sample class (main screen)
  * player/card/deck/game controller/player configuration/ basic ui /Single Player
  * and Multiplayer functionality -> configuring players depending on input.
@@ -68,6 +68,15 @@ package sample;
  * Added method in player that adds to existing points.
  * At the end of each round (where all 52 cards are played), the gameController
  * will open a new screen that represents the score of the players.
+ *
+ *
+ * 1.9 Restricted each player to only the suit that has been played, or if there is
+ * no suit that the player has, then he/she is allowed to play any card. These changes
+ * were made in GameRegulator.
+ * Game will return an int array indicating which indicies of the image view to disable.
+ * GameController will applyRestrictions(array) to the array.
+ *
+ *
  */
 
 import javafx.application.Application;
@@ -91,13 +100,10 @@ import javafx.stage.Stage;
 import jfxtras.labs.util.event.MouseControlUtil;
 
 import java.io.IOException;
-import java.util.Timer;
+import java.util.*;
 
 
 import java.net.URL;
-import java.util.HashMap;
-import java.util.ResourceBundle;
-import java.util.TimerTask;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -175,26 +181,27 @@ public class GameController implements Initializable {
     public ImageView card52;
     private Timer1 timer = new Timer1();
     private Deck deck = new Deck();
-    private Player[] players = Main.players;
     private final int HAND_SIZE = 13;
     private int pointer;
-    private GameRegulator game = new GameRegulator();
+    private GameRegulator game;
     private int round = 0;
     private int seconds = 2;
     private int counter = 0;
+    private ArrayList<Integer> restrictionList;
 
 
     @Override
     public void initialize(URL fxmlFileLocation, ResourceBundle resources) {
+        game = new GameRegulator();
         if (Main.playType.equals("Single Player")) {
             for (int i = 0; i < DEFAULT_NAMES.length; i++) {
-                players[i] = new Player(DEFAULT_NAMES[i], DEFAULT_COLORS[i]);
+                Main.players[i] = new Player(DEFAULT_NAMES[i], DEFAULT_COLORS[i]);
             }
         }
-        player1.setText(players[0].getName());
-        player2.setText(players[1].getName());
-        player3.setText(players[2].getName());
-        player4.setText(players[3].getName());
+        player1.setText(Main.players[0].getName());
+        player2.setText(Main.players[1].getName());
+        player3.setText(Main.players[2].getName());
+        player4.setText(Main.players[3].getName());
 
 
         game.shuffleDeck(deck);
@@ -204,12 +211,12 @@ public class GameController implements Initializable {
         //shuffled.
 
         for (int i = 0; i < HAND_SIZE; i++) {
-            for (int j = 0; j < players.length; j++) {
+            for (int j = 0; j < Main.players.length; j++) {
                 Card temp = game.dealCard();
                 if (temp.toString().equals("TwoOfClubs")) {
                     pointer = j; // This pointer will indicate the index of the player that will start first.
                 }
-                players[j].receiveCard(temp);
+                Main.players[j].receiveCard(temp);
             }
         }
 
@@ -268,11 +275,11 @@ public class GameController implements Initializable {
         imageList[51] = new ImageCardContainer(card52);
 
         int index = 0;
-        for (int i = 0; i < players.length; i++) {
+        for (int i = 0; i < Main.players.length; i++) {
             for (int j = 0; j < 13; j++) {
                 imageList[index].getImageView().setImage(new Image(getClass().getResourceAsStream("/resources/"
-                        + players[i].returnHand().get(j).toString() + ".png"))); //This assigns all the images to the imageView
-                imageList[index].setCard(players[i].returnHand().get(j));
+                        + Main.players[i].returnHand().get(j).toString() + ".png"))); //This assigns all the images to the imageView
+                imageList[index].setCard(Main.players[i].returnHand().get(j));
                 index++;
             }
         }
@@ -291,6 +298,14 @@ public class GameController implements Initializable {
     //        player1.setText(players[0].returnHand().get(0).toString());
     public void startMatch() {
         roundRegulate(pointer);
+        restrictionList = game.calculateRestrictions(pointer);
+        applyRestrictions(restrictionList);
+        for(int i = 0; i < restrictionList.size(); i++) {
+            System.out.println(restrictionList.get(i));
+        }
+
+
+
         imageList[0].getImageView().setOnDragDetected(new EventHandler<MouseEvent>() {
             public void handle(MouseEvent event) {
                 /* drag was detected, start drag-and-drop gesture*/
@@ -1653,8 +1668,9 @@ public class GameController implements Initializable {
                         success = true;
                         round++;
                         int temp = i % 13;
-                        System.out.println("GAME SCREEN: " + players[pointer].returnHand().get(temp).getCardValue());
-                        game.acceptCard(players[pointer].returnHand().get(temp), pointer);
+                        System.out.println("GAME SCREEN: " + Main.players[pointer].returnHand().get(temp).getCardValue());
+                        Main.players[pointer].returnHand().get(temp).setPlayed(true);
+                        game.acceptCard(Main.players[pointer].returnHand().get(temp), pointer);
                     }
                 }
                 event.setDropCompleted(success);
@@ -1665,11 +1681,14 @@ public class GameController implements Initializable {
                     //Need to clear stage
                     updateTable();
                     pointer = game.computeHighestPlayer();
-                    players[pointer].setPoints(game.getPoints());
+                    Main.players[pointer].setPoints(game.getPoints());
                 } else {
                     pointer = game.incrementPlayerRound(pointer);
                     System.out.println("Pointer value: " + pointer);
                     roundRegulate(pointer);
+                    restrictionList = game.calculateRestrictions(pointer);
+                    System.out.println("After round 1:");
+                    applyRestrictions(restrictionList);
                 }
 
                 if (counter == 52) {
@@ -1692,6 +1711,12 @@ public class GameController implements Initializable {
     private void disableGUI() {
         for (int i = 0; i <imageList.length; i++) {
             imageList[i].getImageView().setDisable(true);
+        }
+    }
+
+    private void applyRestrictions(ArrayList<Integer> restrictionList) {
+        for (int i = 0; i < restrictionList.size(); i++) {
+            imageList[restrictionList.get(i)].getImageView().setDisable(true);
         }
     }
 
@@ -1744,10 +1769,10 @@ public class GameController implements Initializable {
                                     target.setLeft(null);
                                     target.setRight(null);
                                     roundRegulate(pointer);
-                                    score1.setText(Integer.toString(players[0].getPoints()));
-                                    score2.setText(Integer.toString(players[1].getPoints()));
-                                    score3.setText(Integer.toString(players[2].getPoints()));
-                                    score4.setText(Integer.toString(players[3].getPoints()));
+                                    score1.setText(Integer.toString(Main.players[0].getPoints()));
+                                    score2.setText(Integer.toString(Main.players[1].getPoints()));
+                                    score3.setText(Integer.toString(Main.players[2].getPoints()));
+                                    score4.setText(Integer.toString(Main.players[3].getPoints()));
                                     System.out.println("Executed");
                                     System.out.println("New Pointer: " + pointer);
                                     System.out.println("---------------------------------------------");

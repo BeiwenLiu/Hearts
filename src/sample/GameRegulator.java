@@ -15,6 +15,7 @@ public class GameRegulator {
     private int imageIndex; //This is only used temporarily to assign
     //the corresponding card indicies to the corresponding imageView.
     CardIndexContainer[] container = new CardIndexContainer[4];
+    private boolean isEmpty;
 
     public int getPoints() {
         return points;
@@ -27,6 +28,7 @@ public class GameRegulator {
         public CardIndexContainer(Card card, int index) {
             this.card = card;
             this.index = index;
+            isEmpty = true;
         }
 
         public CardIndexContainer() {
@@ -89,6 +91,7 @@ public class GameRegulator {
         if (index >= 4) {
             index = 0;
         }
+        isEmpty = false;
         System.out.println("Adding to index: " + index);
         container[index].setCard(card);
         container[index].setPointer(pointer);
@@ -99,6 +102,7 @@ public class GameRegulator {
         index = 0;
         ArrayList<Card> cardsWithPoints = new ArrayList<>();
         CardIndexContainer max = container[0];
+        cardsWithPoints.add(container[0].getCard());
         for (int i = 1; i < container.length; i++) {
             cardsWithPoints.add(container[i].getCard());
             if (container[i].getCard().getSuit().equals(max.getCard().getSuit())) {
@@ -121,6 +125,57 @@ public class GameRegulator {
             }
         }
         return total;
+    }
+
+    public ArrayList<Integer> calculateRestrictions(int pointer) {
+        ArrayList<Integer> restriction = new ArrayList<>();
+        ArrayList<Card> hand = Main.players[pointer].returnHand();
+        Card target = null;
+        if (!isEmpty) {
+            target = container[0].getCard();
+        }
+        if (target == null) {
+            for (int i = 0; i < hand.size(); i++) {
+                if (!(hand.get(i).toString().equals("TwoOfClubs"))) {
+                    restriction.add(i);
+                }
+            }
+        } else {
+            for (int i = 0; i < hand.size(); i++) {
+                if (!(target.getSuit().equals(hand.get(i).getSuit()))
+                        || hand.get(i).getPlayed()) {
+                    System.out.println("Target card: " + target.toString());
+                    System.out.println("Player card: " + hand.get(i).toString());
+                    restriction.add(i);
+                    System.out.println("I ADDED WHEN I SHOULDNT");
+                }
+                System.out.println("HEY" + i);
+                if (restriction.size() == 13) {
+                    System.out.println("Executed");
+                    return null;
+
+                }
+            }
+        }
+        switch (pointer) {
+            case 1:
+                for (int i = 0; i < restriction.size();i++) {
+                    restriction.set(i, restriction.get(i) + 13);
+                }
+                break;
+            case 2:
+                for (int i = 0; i < restriction.size();i++) {
+                    restriction.set(i, restriction.get(i) + 26);
+                }
+                break;
+            case 3:
+                for (int i = 0; i < restriction.size();i++) {
+                    restriction.set(i, restriction.get(i) + 39);
+                }
+        }
+
+        return restriction;
+
     }
 
 
