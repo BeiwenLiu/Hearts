@@ -1,7 +1,7 @@
 package sample;
 /**
  * @author Beiwen Liu
- * @version 1.9
+ * @version 1.12
  * 1.0 Notes: Implemented Basic structure of sample class (main screen)
  * player/card/deck/game controller/player configuration/ basic ui /Single Player
  * and Multiplayer functionality -> configuring players depending on input.
@@ -79,10 +79,32 @@ package sample;
  *1.10 Added method to player that re-arranges the player's hand of cards
  * to the suit and card value. Method reArrange() in player also uses a selection
  * sort algorithm to sort the cards in increasing order depending on the card value.
+ *
+ * 1.11 Added "continue" button on Score screen. Fixed null pointer exception by clearing
+ * the player's hand at the beginning of every round before distributing cards to prevent
+ * the global variable Main.players[i].returnHand() to carry over
+ * any cards from the previous round. Also accounted for returning a null value in
+ * sort() in players because sometimes if none of the suits were present
+ * in the player's hand, it would have given a null pointer exception.
+ * Added new Score Scene that will dynamically add a row to represent the scores for that current round.
+ * As soon as any of the scores hit 100, the screen will stop adding rows, and the game will end.
+ *
+ * 1.12 Added tableview functionality with dynamic adding of points to score board. Created DataHolder class
+ * to support tableview functionality, created static variable in Main for data to be updated each time
+ * scorecontroller is executed.
+ *
+ * 1.13 Table Column titles accurately represent player's names. Table accurately updates and adds
+ * the player's points for each round (not cumulative). Implemented Shooting the Moon
+ *
+ * 1.14 Need to dim/notify which cards to play for each player during their turn
+ * Need to set delay before switching to next score screen after each round
+ * Need to account for shooting the moon if "Player's choice" is turned on.
+ * Need to end the game if someone breaks 100.
  */
 
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -116,6 +138,7 @@ import java.util.concurrent.TimeUnit;
  * Created by Beiwen Liu on 1/23/2016.
  */
 public class GameController implements Initializable {
+
     private final String[] DEFAULT_NAMES = {"You", "James", "Thomas", "Daniel"};
     private final String[] DEFAULT_COLORS = {"Red", "Green", "Blue", "Yellow"};
     public Label player1;
@@ -126,6 +149,7 @@ public class GameController implements Initializable {
     public Label score2;
     public Label score3;
     public Label score4;
+    public Button nextScreen;
     private ImageCardContainer[] imageList = new ImageCardContainer[52];
     public BorderPane target;
     public Pane gameView;
@@ -212,6 +236,13 @@ public class GameController implements Initializable {
         //to each player from the top of the deck after it has been
         //shuffled.
 
+        for (int i = 0; i < Main.players.length; i++) {
+            Main.players[i].clearHand();
+            Main.players[i].clearPoints();
+            System.out.println(Main.players[i].getPoints());
+        }
+
+
         for (int i = 0; i < HAND_SIZE; i++) {
             for (int j = 0; j < Main.players.length; j++) {
                 Card temp = game.dealCard();
@@ -226,8 +257,6 @@ public class GameController implements Initializable {
             Main.players[i].reArrangeCards();
         }
 
-
-        System.out.println("Pointer: " + pointer);
         imageList[0] = new ImageCardContainer(card1);
         imageList[1] = new ImageCardContainer(card2);
         imageList[2] = new ImageCardContainer(card3);
@@ -307,9 +336,6 @@ public class GameController implements Initializable {
         roundRegulate(pointer);
         restrictionList = game.calculateRestrictions(pointer);
         applyRestrictions(restrictionList);
-        for(int i = 0; i < restrictionList.size(); i++) {
-            System.out.println(restrictionList.get(i));
-        }
 
 
 
@@ -1675,7 +1701,6 @@ public class GameController implements Initializable {
                         success = true;
                         round++;
                         int temp = i % 13;
-                        System.out.println("GAME SCREEN: " + Main.players[pointer].returnHand().get(temp).getCardValue());
                         Main.players[pointer].returnHand().get(temp).setPlayed(true);
                         game.acceptCard(Main.players[pointer].returnHand().get(temp), pointer);
                     }
@@ -1691,17 +1716,32 @@ public class GameController implements Initializable {
                     Main.players[pointer].setPoints(game.getPoints());
                 } else {
                     pointer = game.incrementPlayerRound(pointer);
-                    System.out.println("Pointer value: " + pointer);
                     roundRegulate(pointer);
                     restrictionList = game.calculateRestrictions(pointer);
-                    System.out.println("After round 1:");
                     applyRestrictions(restrictionList);
                 }
 
                 if (counter == 52) {
+                    boolean shotMoon = false;
+                    for (int i = 0; i < Main.players.length; i++) {
+                        if (Main.players[i].getPoints() == 26) {
+                            shotMoon = true;
+                        }
+                    }
+                    if (shotMoon) {
+                        for (int i = 0; i < Main.players.length; i++) {
+                            if (Main.players[i].getPoints() != 26) {
+                                Main.players[i].clearPoints();
+                                Main.players[i].setPoints(26);
+                            } else {
+                                Main.players[i].clearPoints();
+                            }
+                        }
+                    }
+
                     Scene game = null;
                     try {
-                        game = new Scene(FXMLLoader.load(getClass().getResource("PlayerConfiguration.fxml")));
+                        game = new Scene(FXMLLoader.load(getClass().getResource("Score.fxml")));
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -1770,7 +1810,6 @@ public class GameController implements Initializable {
                             Platform.runLater(new Runnable(){
                                 @Override
                                 public void run() {
-                                    System.out.println(counter);
                                     target.setBottom(null);
                                     target.setTop(null);
                                     target.setLeft(null);
@@ -1780,9 +1819,6 @@ public class GameController implements Initializable {
                                     score2.setText(Integer.toString(Main.players[1].getPoints()));
                                     score3.setText(Integer.toString(Main.players[2].getPoints()));
                                     score4.setText(Integer.toString(Main.players[3].getPoints()));
-                                    System.out.println("Executed");
-                                    System.out.println("New Pointer: " + pointer);
-                                    System.out.println("---------------------------------------------");
                                 }
                             });
                         }
@@ -1795,8 +1831,17 @@ public class GameController implements Initializable {
     }
 
 
-
-
+    public void nextf(Event event) {
+        Scene game = null;
+        try {
+            game = new Scene(FXMLLoader.load(getClass().getResource("Score.fxml")));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Stage initializer = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+        initializer.setScene(game);
+        initializer.show();
+    }
 }
 
 

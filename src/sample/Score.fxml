@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="scorePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ScoreController">
+   <children>
+      <Button layoutX="618.0" layoutY="572.0" mnemonicParsing="false" onMouseClicked="#goBack" text="continue" />
+      <TableView fx:id="tableView" layoutX="492.0" layoutY="197.0" prefHeight="319.0" prefWidth="302.0">
+        <columns>
+          <TableColumn fx:id="player1" prefWidth="75.0" text="C1" />
+          <TableColumn fx:id="player2" prefWidth="75.0" text="C2" />
+            <TableColumn fx:id="player3" prefWidth="71.0" text="C3" />
+            <TableColumn fx:id="player4" minWidth="0.0" prefWidth="79.0" text="C4" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>

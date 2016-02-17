@@ -50,17 +50,25 @@ public class Player {
         spades = sort(spades);
         hearts = sort(hearts);
 
-        for (int i = 0; i < clubs.size(); i++) {
-            hand.add(clubs.get(i));
+        if (!(clubs.isEmpty()) || clubs != null) {
+            for (int i = 0; i < clubs.size(); i++) {
+                hand.add(clubs.get(i));
+            }
         }
-        for (int i = 0; i < diamonds.size(); i++) {
-            hand.add(diamonds.get(i));
+        if (!(diamonds.isEmpty()) || diamonds != null) {
+            for (int i = 0; i < diamonds.size(); i++) {
+                hand.add(diamonds.get(i));
+            }
         }
-        for (int i = 0; i < spades.size(); i++) {
-            hand.add(spades.get(i));
+        if (!(spades.isEmpty()) || spades != null) {
+            for (int i = 0; i < spades.size(); i++) {
+                hand.add(spades.get(i));
+            }
         }
-        for (int i = 0; i < hearts.size(); i++) {
-            hand.add(hearts.get(i));
+        if (!(hearts.isEmpty()) || hearts != null) {
+            for (int i = 0; i < hearts.size(); i++) {
+                hand.add(hearts.get(i));
+            }
         }
 
 
@@ -71,7 +79,7 @@ public class Player {
         if (list.size() != 0) {
             min = list.get(0);
         } else {
-            return null;
+            return new ArrayList<>();
         }
         for (int i = 0; i < list.size() - 1; i++) {
             for (int j = i + 1; j < list.size(); j++) {
@@ -83,6 +91,12 @@ public class Player {
             }
         }
         return list;
+    }
+
+    public void clearHand() {
+        if (!hand.isEmpty()) {
+            hand.clear();
+        }
     }
 
     public String getName() {
@@ -107,6 +121,10 @@ public class Player {
 
     public void setPoints(int points) {
         this.points = this.points + points;
+    }
+
+    public void clearPoints() {
+        this.points = 0;
     }
 
     @Override

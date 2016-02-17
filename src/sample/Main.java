@@ -1,6 +1,8 @@
 package sample;
 
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,7 +12,9 @@ import javafx.stage.Stage;
 
 
 public class Main extends Application {
-
+    public static ObservableList<DataHolder> data = FXCollections.observableArrayList();
+    public static boolean roundOver = false;
+    public static int counter = 0;
     public static String playType;
     public static Stage theStage;
     public static Player[] players = new Player[4];

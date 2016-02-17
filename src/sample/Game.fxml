@@ -68,5 +68,6 @@
       <Label fx:id="score2" layoutX="28.0" layoutY="408.0" style="-fx-border-color: black;" text="Score" />
       <Label fx:id="score3" layoutX="617.0" layoutY="31.0" style="-fx-border-color: black;" text="Score" />
       <Label fx:id="score4" layoutX="1225.0" layoutY="389.0" style="-fx-border-color: black;" text="Score" />
+      <Button fx:id="nextScreen" layoutX="614.0" layoutY="221.0" mnemonicParsing="false" onMouseClicked="#nextf" text="Button" />
    </children>
 </Pane>

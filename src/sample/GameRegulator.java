@@ -54,7 +54,6 @@ public class GameRegulator {
 
 
     public GameRegulator() {
-        System.out.println("Welcome");
         for (int i = 0; i < container.length; i++) {
             container[i] = new CardIndexContainer();
         }
@@ -92,7 +91,6 @@ public class GameRegulator {
             index = 0;
         }
         isEmpty = false;
-        System.out.println("Adding to index: " + index);
         container[index].setCard(card);
         container[index].setPointer(pointer);
         index++;
@@ -144,14 +142,9 @@ public class GameRegulator {
             for (int i = 0; i < hand.size(); i++) {
                 if (!(target.getSuit().equals(hand.get(i).getSuit()))
                         || hand.get(i).getPlayed()) {
-                    System.out.println("Target card: " + target.toString());
-                    System.out.println("Player card: " + hand.get(i).toString());
                     restriction.add(i);
-                    System.out.println("I ADDED WHEN I SHOULDNT");
                 }
-                System.out.println("HEY" + i);
                 if (restriction.size() == 13) {
-                    System.out.println("Executed");
                     return null;
 
                 }
