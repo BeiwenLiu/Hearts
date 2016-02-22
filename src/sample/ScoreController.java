@@ -1,7 +1,10 @@
 package sample;
 
+import com.sun.javafx.scene.control.skin.TableHeaderRow;
 import com.sun.javaws.progress.PreloaderPostEventListener;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.Event;
@@ -36,11 +39,36 @@ public class ScoreController implements Initializable {
     public TableColumn player3;
     public TableColumn player4;
 
+    public TableColumn total1;
+    public TableColumn total2;
+    public TableColumn total3;
+    public TableColumn total4;
+
+    public static int[] totalScores = new int[4];
+    public TableView tableView2;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 //        if (!Main.enteredScoreController) {
 //
 //        }
+//        tableView.widthProperty().addListener(new ChangeListener<Number>()
+//        {
+//            @Override
+//            public void changed(ObservableValue<? extends Number> source, Number oldWidth, Number newWidth)
+//            {
+//                TableHeaderRow header = (TableHeaderRow) tableView.lookup("TableHeaderRow");
+//                header.reorderingProperty().addListener(new ChangeListener<Boolean>() {
+//                    @Override
+//                    public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+//                        header.setReordering(false);
+//                    }
+//                });
+//            }
+//        });
+        tableView.setMouseTransparent(true);
+        tableView2.setMouseTransparent(true);
+        tableView2.setPlaceholder(new Label(""));
         player1.setText(Main.players[0].getName());
         player2.setText(Main.players[1].getName());
         player3.setText(Main.players[2].getName());
@@ -50,12 +78,19 @@ public class ScoreController implements Initializable {
         player3.setCellValueFactory(new PropertyValueFactory<DataHolder, Integer>("points3"));
         player4.setCellValueFactory(new PropertyValueFactory<DataHolder, Integer>("points4"));
         DataHolder dataHolder = new DataHolder();
+        for (int i = 0; i < totalScores.length; i++) {
+            totalScores[i] += Main.players[i].getPoints();
+        }
         dataHolder.points1.setValue(Main.players[0].getPoints());
         dataHolder.points2.setValue(Main.players[1].getPoints());
         dataHolder.points3.setValue(Main.players[2].getPoints());
         dataHolder.points4.setValue(Main.players[3].getPoints());
         Main.data.add(dataHolder);
         tableView.setItems(Main.data);
+        total1.setText(String.valueOf(totalScores[0]));
+        total2.setText(String.valueOf(totalScores[1]));
+        total3.setText(String.valueOf(totalScores[2]));
+        total4.setText(String.valueOf(totalScores[3]));
     }
 
 

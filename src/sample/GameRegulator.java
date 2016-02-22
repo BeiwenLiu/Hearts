@@ -171,6 +171,27 @@ public class GameRegulator {
 
     }
 
+    public void computeShootMoon() {
+        if (Main.shootersChoice == false) {
+            boolean shotMoon = false;
+            for (int i = 0; i < Main.players.length; i++) {
+                if (Main.players[i].getPoints() == 26) {
+                    shotMoon = true;
+                }
+            }
+            if (shotMoon) {
+                for (int i = 0; i < Main.players.length; i++) {
+                    if (Main.players[i].getPoints() != 26) {
+                        Main.players[i].clearPoints();
+                        Main.players[i].setPoints(26);
+                    } else {
+                        Main.players[i].clearPoints();
+                    }
+                }
+            }
+        }
+    }
+
 
     public Card assignCard() {
         return deck.get(imageIndex++);

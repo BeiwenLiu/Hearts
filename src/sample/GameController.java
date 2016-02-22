@@ -96,9 +96,10 @@ package sample;
  * 1.13 Table Column titles accurately represent player's names. Table accurately updates and adds
  * the player's points for each round (not cumulative). Implemented Shooting the Moon
  *
+ * Created private method in game that will compute shooting moon (and account for whether or not shooter's choice is turned on)
+ * Set the delay for the last round before going into score screen.
+ *
  * 1.14 Need to dim/notify which cards to play for each player during their turn
- * Need to set delay before switching to next score screen after each round
- * Need to account for shooting the moon if "Player's choice" is turned on.
  * Need to end the game if someone breaks 100.
  */
 
@@ -319,7 +320,9 @@ public class GameController implements Initializable {
                 index++;
             }
         }
-        startMatch();
+        if (Main.playType.equals("Multiplayer")) {
+            startMatch();
+        }
     }
 
     //        for (int round = 0; round < HAND_SIZE; round++) {
@@ -1722,32 +1725,8 @@ public class GameController implements Initializable {
                 }
 
                 if (counter == 52) {
-                    boolean shotMoon = false;
-                    for (int i = 0; i < Main.players.length; i++) {
-                        if (Main.players[i].getPoints() == 26) {
-                            shotMoon = true;
-                        }
-                    }
-                    if (shotMoon) {
-                        for (int i = 0; i < Main.players.length; i++) {
-                            if (Main.players[i].getPoints() != 26) {
-                                Main.players[i].clearPoints();
-                                Main.players[i].setPoints(26);
-                            } else {
-                                Main.players[i].clearPoints();
-                            }
-                        }
-                    }
-
-                    Scene game = null;
-                    try {
-                        game = new Scene(FXMLLoader.load(getClass().getResource("Score.fxml")));
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    Stage initializer = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-                    initializer.setScene(game);
-                    initializer.show();
+                    game.computeShootMoon();
+                    updateNextScreen(event);
                 }
                 /* let the source know whether the string was successfully
                  * transferred and used */
@@ -1819,6 +1798,36 @@ public class GameController implements Initializable {
                                     score2.setText(Integer.toString(Main.players[1].getPoints()));
                                     score3.setText(Integer.toString(Main.players[2].getPoints()));
                                     score4.setText(Integer.toString(Main.players[3].getPoints()));
+                                }
+                            });
+                        }
+
+                    }
+                },
+                1, //After this amount of seconds, run() will be executed.
+                1, //Not sure what this does.
+                TimeUnit.SECONDS);
+    }
+
+
+    private void updateNextScreen(Event event) {
+        final ScheduledExecutorService scheduler
+                = Executors.newScheduledThreadPool(1);
+
+        scheduler.scheduleAtFixedRate(
+                new Runnable(){
+
+                    int counter = 0;
+
+                    @Override
+                    public void run() {
+                        counter++;
+                        if(counter<=1){
+
+                            Platform.runLater(new Runnable(){
+                                @Override
+                                public void run() {
+                                    nextf(event);
                                 }
                             });
                         }
