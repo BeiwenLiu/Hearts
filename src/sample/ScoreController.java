@@ -43,8 +43,6 @@ public class ScoreController implements Initializable {
     public TableColumn total2;
     public TableColumn total3;
     public TableColumn total4;
-
-    public static int[] totalScores = new int[4];
     public TableView tableView2;
 
     @Override
@@ -73,24 +71,28 @@ public class ScoreController implements Initializable {
         player2.setText(Main.players[1].getName());
         player3.setText(Main.players[2].getName());
         player4.setText(Main.players[3].getName());
-        player1.setCellValueFactory(new PropertyValueFactory<DataHolder, Integer>("points1"));
-        player2.setCellValueFactory(new PropertyValueFactory<DataHolder, Integer>("points2"));
-        player3.setCellValueFactory(new PropertyValueFactory<DataHolder, Integer>("points3"));
-        player4.setCellValueFactory(new PropertyValueFactory<DataHolder, Integer>("points4"));
-        DataHolder dataHolder = new DataHolder();
-        for (int i = 0; i < totalScores.length; i++) {
-            totalScores[i] += Main.players[i].getPoints();
+        for (int i = 0; i < Main.totalScores.length; i++) {
+            Main.totalScores[i] += Main.players[i].getPoints();
         }
+
+
+        DataHolder dataHolder = new DataHolder();
         dataHolder.points1.setValue(Main.players[0].getPoints());
         dataHolder.points2.setValue(Main.players[1].getPoints());
         dataHolder.points3.setValue(Main.players[2].getPoints());
         dataHolder.points4.setValue(Main.players[3].getPoints());
+
+
+        player1.setCellValueFactory(new PropertyValueFactory<DataHolder, Integer>("points1"));
+        player2.setCellValueFactory(new PropertyValueFactory<DataHolder, Integer>("points2"));
+        player3.setCellValueFactory(new PropertyValueFactory<DataHolder, Integer>("points3"));
+        player4.setCellValueFactory(new PropertyValueFactory<DataHolder, Integer>("points4"));
         Main.data.add(dataHolder);
         tableView.setItems(Main.data);
-        total1.setText(String.valueOf(totalScores[0]));
-        total2.setText(String.valueOf(totalScores[1]));
-        total3.setText(String.valueOf(totalScores[2]));
-        total4.setText(String.valueOf(totalScores[3]));
+        total1.setText(String.valueOf(Main.totalScores[0]));
+        total2.setText(String.valueOf(Main.totalScores[1]));
+        total3.setText(String.valueOf(Main.totalScores[2]));
+        total4.setText(String.valueOf(Main.totalScores[3]));
     }
 
 

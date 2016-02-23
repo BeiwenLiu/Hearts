@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 
 
 public class Main extends Application {
+    public static int[] totalScores = new int[4];
     public static ObservableList<DataHolder> data = FXCollections.observableArrayList();
     public static boolean roundOver = false;
     public static int counter = 0;

@@ -98,9 +98,14 @@ package sample;
  *
  * Created private method in game that will compute shooting moon (and account for whether or not shooter's choice is turned on)
  * Set the delay for the last round before going into score screen.
+ * ScoreController: Added Row that displays total score. Changed functionality of tableView by setting "Mouse transparency" to be false
+ * so that column size and placement cannot be altered with mouse click.
+ * Created static instances within Score Controller that keeps track of total scores of each player for each game.
  *
  * 1.14 Need to dim/notify which cards to play for each player during their turn
  * Need to end the game if someone breaks 100.
+ * Need to add button that allows you to go to score section without adding dynamically
+ * Need to prevent borderpane from changing center-aligned imageviews.
  */
 
 import javafx.application.Application;
@@ -1686,6 +1691,9 @@ public class GameController implements Initializable {
                 counter++;
                 /* if there is a string data on dragboard, read it and use it */
                 Dragboard dragboard = event.getDragboard();
+                if (round == 0) {
+                    alignBorderPane(target);
+                }
                 for (int i = 0; i < imageList.length; i++) {
                     if (dragboard.getString().equals(imageList[i].getCard().toString())) {
                         if (i < 13) {
@@ -1738,6 +1746,34 @@ public class GameController implements Initializable {
         for (int i = 0; i <imageList.length; i++) {
             imageList[i].getImageView().setDisable(true);
         }
+    }
+
+    private void alignBorderPane(BorderPane target) {
+        Label[] labelArray = new Label[4];
+        for (int i = 0; i < labelArray.length; i++) {
+            labelArray[i] = new Label("Hey");
+        }
+        labelArray[0].setPrefWidth(63.5);
+        labelArray[0].setPrefHeight(88.9);
+        labelArray[1].setPrefWidth(88.9);
+        labelArray[1].setPrefHeight(63.5);
+        labelArray[2].setPrefHeight(88.9);
+        labelArray[2].setPrefWidth(63.5);
+        labelArray[3].setPrefHeight(63.5);
+        labelArray[3].setPrefWidth(88.9);
+        target.setBottom(labelArray[0]);
+        BorderPane.setAlignment(labelArray[0], Pos.CENTER);
+
+        target.setLeft(labelArray[1]);
+        BorderPane.setAlignment(labelArray[1], Pos.CENTER);
+
+        target.setTop(labelArray[2]);
+        BorderPane.setAlignment(labelArray[2], Pos.CENTER);
+
+        target.setRight(labelArray[3]);
+        BorderPane.setAlignment(labelArray[3], Pos.CENTER);
+
+
     }
 
     private void applyRestrictions(ArrayList<Integer> restrictionList) {
