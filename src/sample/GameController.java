@@ -320,7 +320,7 @@ public class GameController implements Initializable {
         for (int i = 0; i < Main.players.length; i++) {
             for (int j = 0; j < 13; j++) {
                 imageList[index].getImageView().setImage(new Image(getClass().getResourceAsStream("/resources/"
-                        + Main.players[i].returnHand().get(j).toString() + ".png"))); //This assigns all the images to the imageView
+                        + Main.players[i].returnHand().get(j).toString() + ".jpg"))); //This assigns all the images to the imageView
                 imageList[index].setCard(Main.players[i].returnHand().get(j));
                 index++;
             }
@@ -1751,7 +1751,7 @@ public class GameController implements Initializable {
     private void alignBorderPane(BorderPane target) {
         Label[] labelArray = new Label[4];
         for (int i = 0; i < labelArray.length; i++) {
-            labelArray[i] = new Label("Hey");
+            labelArray[i] = new Label("");
         }
         labelArray[0].setPrefWidth(63.5);
         labelArray[0].setPrefHeight(88.9);
@@ -1840,7 +1840,7 @@ public class GameController implements Initializable {
 
                     }
                 },
-                1, //After this amount of seconds, run() will be executed.
+                5, //After this amount of seconds, run() will be executed.
                 1, //Not sure what this does.
                 TimeUnit.SECONDS);
     }
